@@ -39,7 +39,6 @@ foreach ($page in $pages) {
     $links = [Regex]::Matches($pageContent, '<a[^>]+href="([^"]+)"').Value
 
     foreach ($link in $links) {
-        # Extract just the URL part of the matched pattern using PowerShell's if statement
         if ($link -match 'href="([^"]+)"') {
             $url = $Matches[1]
             # Add the URL to the 'Links' array for this page
